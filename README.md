@@ -14,3 +14,6 @@ TapToLaunchApi client;
 client.url("ws://tapToIp:7497");
 client.launch("**launch.random:snes,nes");
 ```
+## Example Projects
+In addtion to the included example, here are some projects using this library.
+* [TapTo Esp32](https://github.com/v1605/tapto-esp32)
