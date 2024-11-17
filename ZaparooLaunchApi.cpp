@@ -3,19 +3,19 @@
 #include <ArduinoWebsockets.h>
 #include <UUID.h>
 #include <atomic>
-#include "TapToLaunchApi.h"
+#include "ZaparooLaunchApi.h"
 
 using namespace websockets;
 
 String defaultValue={};
 
-TapToLaunchApi::TapToLaunchApi(){}
+ZaparooLaunchApi::ZaparooLaunchApi(){}
 
-int TapToLaunchApi::launch(const String& content){
+int ZaparooLaunchApi::launch(const String& content){
   return launch(content, defaultValue);
 }
 
-int TapToLaunchApi::launch(const String& content, const String& uid){
+int ZaparooLaunchApi::launch(const String& content, const String& uid){
   WebsocketsClient client;
   lastError.store(0);
   complete.store(false);
@@ -57,6 +57,6 @@ int TapToLaunchApi::launch(const String& content, const String& uid){
   return lastError.load();
 }
 
-int TapToLaunchApi::launchUid(const String& uid){
+int ZaparooLaunchApi::launchUid(const String& uid){
   return launch(defaultValue, uid);
 }
