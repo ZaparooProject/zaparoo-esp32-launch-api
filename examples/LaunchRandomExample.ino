@@ -1,18 +1,19 @@
 #include <Arduino.h>
 #include <WiFi.h>
-#include "TapToLaunchApi.h"
+#include "ZaparooLaunchApi.h"
 
 //Config (Update before compile)--------------------------------------------------
 const char* ssid = "WifiName";
 const char* password = "WifiPassword";
-const String tapToUrl = "ws://tapToIp:7497";
+const String zaparooUrl = "ws://tapToIp:7497";
 //EndConfig-----------------------------------------------------------------------
 
-TapToLaunchApi client(tapToUrl);
+ZaparooLaunchApi client;
 bool launched = false;
 
 void setup() {
   Serial.begin(115200);
+  client.url(zaparooUrl);
   initWiFi();
   while (!Serial) {
     delay(200);
@@ -21,10 +22,12 @@ void setup() {
 
 void loop() {
   if(!launched){
-    int code = client.launch("**launch.random:snes,nes");
+    String result = "";
+    result = result + "**launch.random:snes,nes";
+    int code = client.launch(result);
     launched = code == 0;
     if(launched){
-      Serial.println("Launched TapTo");
+      Serial.println("Launched Zaparoo");
     }else{
       Serial.print("Error code ");
       Serial.println(code);
