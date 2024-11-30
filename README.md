@@ -8,7 +8,7 @@ This libary provides a convenient, rest like client to launch games via the [Zap
 
 ## Basic Usage
 
-Setup a client and launch a game (launch expects a [zapScript](https://wiki.zaparoo.org/ZapScript) formatted String).
+Setup a client and launch a game (launch expects a [ZapScript](https://wiki.zaparoo.org/ZapScript) formatted String).
 ```c++
 TapToLaunchApi client;
 client.url("ws://tapToIp:7497");
