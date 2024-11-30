@@ -8,7 +8,7 @@ This libary provides a convenient, rest like client to launch games via the [Zap
 
 ## Basic Usage
 
-Setup a client and launch a game (launch expects a [TapScript](TapScript) formatted String).
+Setup a client and launch a game (launch expects a [zapScript](https://wiki.zaparoo.org/ZapScript) formatted String).
 ```c++
 TapToLaunchApi client;
 client.url("ws://tapToIp:7497");
@@ -16,4 +16,4 @@ client.launch("**launch.random:snes,nes");
 ```
 ## Example Projects
 In addtion to the included example, here are some projects using this library.
-* [Zaparoo Esp32](https://github.com/v1605/Zaparoo-esp32)
+* [Zaparoo Esp32](https://github.com/ZaparooProject/zaparoo-esp32)
