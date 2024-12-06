@@ -10,7 +10,7 @@ This libary provides a convenient, rest like client to launch games via the [Zap
 
 Setup a client and launch a game (launch expects a [ZapScript](https://wiki.zaparoo.org/ZapScript) formatted String).
 ```c++
-TapToLaunchApi client;
+ZaparooLaunchApi client;
 client.url("ws://ZaparooIp:7497");
 client.launch("**launch.random:snes,nes");
 ```
