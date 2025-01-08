@@ -5,7 +5,7 @@
 //Config (Update before compile)--------------------------------------------------
 const char* ssid = "WifiName";
 const char* password = "WifiPassword";
-const String zaparooUrl = "ws://tapToIp:7497" + String(ZaparooLaunchApi::wsPath);
+const String zaparooUrl = "ws://ZaparooIp:7497" + String(ZaparooLaunchApi::wsPath);
 //EndConfig-----------------------------------------------------------------------
 
 ZaparooLaunchApi client;
