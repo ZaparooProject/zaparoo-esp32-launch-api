@@ -11,6 +11,7 @@ class ZaparooLaunchApi{
   public:
     ZaparooLaunchApi();
     int launch(const String& content);
+    static constexpr const char* wsPath = "/api/v0.1";
     int launch(const String& content, const String& uid);
     int launchUid(const String& uid);
     int stop();
